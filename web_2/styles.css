@@ -1,0 +1,133 @@
+* {margin: 0; padding: 0; box-sizing: border-box;}
+html, body {
+    font-family: "Josefin Slab";
+}
+img {
+    max-width: 100%;
+    margin: 0 auto;
+}
+#app {
+    padding: 1.25em;
+    margin: 0 auto;
+}
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+header ul {
+    display: none;
+    list-style-type: none;
+}
+header ul li {
+    display: inline-block;
+    margin: 0 15px;
+}
+section {
+    border-bottom: 1px solid gray;
+}
+.food-list {
+    text-align: center;
+    margin: 15px 0;
+}
+.food-list > * {
+    margin-bottom: 10px;
+}
+@media (min-width: 1000px) {
+    header .fa, header #mail {
+        display: none;
+    }
+    header ul {
+        display: block;
+    }
+    #food-section {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+    .food-list {
+        width: calc(100%/4);
+        padding: 10px;
+    }
+}
+@media (min-width: 1400px) {
+    #app {
+        max-width: 1400px;
+    }
+}
+.food-page {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+.food-page ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+}
+.food-page ul li {
+    padding: 15px;
+}
+.food-page ul li:hover {
+    background-color: black;
+    color: white;
+}
+.about-chef > * {
+    text-align: center;
+    margin: 10px 0;
+}
+.about-chef h1 {
+    margin-top: 30px;
+}
+.about-chef {
+    text-align: center;
+}
+#footer > * {
+    margin: 30px 0;
+}
+#footer h1, p {
+    margin: 15px 0;
+}
+.blog-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+.blog-content img {
+    width: 70px;
+    height: 70px;
+    margin: 10px;
+}
+button {
+    flex-wrap: wrap;
+    margin: 5px;
+    background-color: gray;
+    color: white;
+    border: none;
+    padding: 2px 10px;
+}
+.popular-tags button:hover {
+    background-color: black;
+}
+@media (min-width: 1000px) {
+    #footer {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: flex-start;
+    }
+    #footer > * {
+        padding: 0 15px;
+        box-sizing: border-box;
+        width: calc(100%/3);
+    }
+}
