@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Azizi Shaharuddin</title>
+    <style></style>
+    <!-- CSS only -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="./images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./portfolio.css">
+</head>
+<body>
+    <div id="container">
+        <nav class="navbar navbar-expand-md navbar-light bg-light navbar-custom">
+            <div class="container-md">
+              <a class="navbar-brand" href="#home-page">Azizi.</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                  <!-- <a class="nav-link active" aria-current="page" href="#home-page">Home</a> -->
+                  <a class="nav-link active" href="#about-me">About Me</a>
+                  <a class="nav-link" href="#playlist-header">Playlist</a>
+                  <a class="nav-link" href="#achievements">Portfolio</a>
+                </div>
+              </div>
+            </div>
+        </nav>
+        <div id="home-page">
+            <!-- <div id="home-phone"></div> -->
+            <div id="home-background"></div>
+            <div class="homepage-content">
+                <h1 class="animate__animated animate__fadeInUp">Azizi Shaharuddin</h1>
+                <h5 class="animate__animated animate__zoomIn animate__delay-1s">Software Engineer at INVOKE</h5>
+            </div>
+        </div>
+        <div id="about-me">
+            <div id="pic-aboutme" class="aboutme aboutme-desc">
+                <div class="sub-header header-aboutme">
+                    <h2>About Me</h2>
+                    <div class="line"></div>
+                </div>
+                <img src="./images/about me.jpg" alt="">
+                <a href="./Azizi Shaharuddin - CV Aug21.pdf" target="_blank">
+                    <button><i class="fa fa-download"></i> Download CV</button>
+                </a>
+            </div>
+            <div id="write-up" class="aboutme aboutme-sec">
+                <p>Hi, my name is Azizi bin Shaharuddin. I was born in Kuala Lumpur. I graduated back in 2019 from Universiti Teknologi Malaysia, Skudai. Upon graduating with a Bachelor's degree in Mechanical Engineering, I got my first job as a Project Engineer at one of the oil and gas services company.</p>
+                <p>I started exploring into programming ever since then, enrolled myself in several online courses. Currently, I'm working as a Software Engineer at INVOKE. </p>
+            </div>
+        </div>
+        <div id="playlist-header" class="sub-header">
+            <h2 id="playlistTitle">Playlist</h2>
+            <div class="line"></div>
+            <h6 id="playlistIntro">Tired of advertisement? Are you bored? Play some music to lift up your mood</h6>
+        </div>
+        <div id="playlist">
+            <div id="song-background" class="display-playlist">
+                <!-- <img src="./images/joji concert.jpg" alt=""> -->
+                <audio src="./audio/Joji, Diplo - Daylight.mp3" id="song"></audio>
+                <div class="current-song">
+                    <h2 id="song-title">Daylight</h2>
+                    <h4 id="song-artist">Joji</h4>
+                    <p id="song-album">Uprising</p> 
+                </div>
+                <div class="playlist-button">
+                    <div id="btnVol" class="button vol" onclick="volButton(-0.1)"><i class="fa fa-volume-down"></i></div>
+                    <div id="switch-btn" class="button prevNext" onclick="changeSong(-1)"><i class="fa fa-backward"></i></div>
+                    <div id="song-button" class="button play" onclick="playButton()"><i class="fa fa-play"></i></div>
+                    <div id="switch-btn" class="button prevNext" onclick="changeSong(1)"><i class="fa fa-forward"></i></div>
+                    <div class="button vol" onclick="volButton(0.1)"><i class="fa fa-volume-up"></i></div>
+                </div>
+            </div>
+            <section class="playlist-button">
+                <div id="btnVol" class="button vol" onclick="volButton(-0.1)"><i class="fa fa-volume-down"></i></div>
+                <div id="switch-btn" class="button prevNext" onclick="changeSong(-1)"><i class="fa fa-backward"></i></div>
+                <div id="song-button" class="button play" onclick="playButton()"><i class="fa fa-play"></i></div>
+                <div id="switch-btn" class="button prevNext" onclick="changeSong(1)"><i class="fa fa-forward"></i></div>
+                <div class="button vol" onclick="volButton(0.1)"><i class="fa fa-volume-up"></i></div>
+            </section>
+            <div class="playlist-container">
+                <div class="playlist-songs" onclick="subSong('0')">
+                    <div class="playlist-image">
+                        <img src="./images/joji - daylight.jpg" alt="">
+                        <audio src="./audio/Joji, Diplo - Daylight.mp3"></audio>
+                    </div>
+                    <div class="playlist-desc">
+                        <h3>Daylight</h3>
+                        <p>Joji</p>
+                        <p>Uprising</p>
+                    </div>
+                </div>
+                <div class="playlist-songs" onclick="subSong('1')">
+                    <div class="playlist-image">
+                        <img src="./images/aizat - the last thing.jpg" alt="">
+                        <audio src="./audio/y2mate.com - AiZ  The Last Thing Official Music Video.mp3"></audio>
+                    </div>
+                    <div class="playlist-desc">
+                        <h3>The last Thing</h3>
+                        <p>Aizat Hamdan</p>
+                        <p></p>
+                    </div>
+                </div>
+                <div class="playlist-songs" onclick="subSong('2')">
+                    <div class="playlist-image">
+                        <img src="./images/fazry - out of time.jpg" alt="">
+                        <audio src="./audio/Joe Dassin - The Last Thing On My Mind.mp3"></audio>
+                    </div>
+                    <div class="playlist-desc">
+                        <h3>Out of time</h3>
+                        <p>Fazry Santaroena</p>
+                        <p></p>
+                    </div>
+                </div>
+                <div class="playlist-songs" onclick="subSong('3')">
+                    <div class="playlist-image">
+                        <img src="./images/mik-gerak_lu.jpg" alt="">
+                        <audio src="./audio/y2mate.com - Gerak Lu Official Music Video.mp3"></audio>
+                    </div>
+                    <div class="playlist-desc">
+                        <h3>Gerak Lu</h3>
+                        <p>Mikhail Raiyan</p>
+                        <p></p>
+                    </div>
+                </div>
+                <div class="playlist-songs" onclick="subSong('4')">
+                    <div class="playlist-image">
+                        <img src="./images/bruno mars - chunky.jpg" alt="">
+                        <audio src="./audio/Bruno Mars - Chunky.mp3"></audio>
+                    </div>
+                    <div class="playlist-desc">
+                        <h3>Chunky</h3>
+                        <p>Bruno Mars</p>
+                        <p>24K Magic</p>
+                    </div>
+                </div>
+                <div class="playlist-songs" onclick="subSong('5')">
+                    <div class="playlist-image">
+                        <img src="./images/colbert - pivot gang.jpg" alt="">
+                        <audio src="./audio/y2mate.com - Pivot Gang  Colbert Official Audio.mp3"></audio>
+                    </div>
+                    <div class="playlist-desc">
+                        <h3>Colbert</h3>
+                        <p>The Pivot Gang</p>
+                        <p></p>
+                    </div>
+                </div>
+                <div class="playlist-songs" onclick="subSong('6')">
+                    <div class="playlist-image">
+                        <img src="./images/after the storm - kaki uchis.jpg" alt="">
+                        <audio src="./audio/y2mate.com - After The Storm  Kali Uchis ft Tyler The Creator  Bootsy Collins lyrics.mp3"></audio>
+                    </div>
+                    <div class="playlist-desc">
+                        <h3>After The Storm</h3>
+                        <p>Kaki Uchis, Tyler The Great</p>
+                        <p></p>
+                    </div>
+                </div>
+                <div class="playlist-songs" onclick="subSong('7')">
+                    <div class="playlist-image">
+                        <img src="./images/crush - souly had.jpg" alt="">
+                        <audio src="./audio/y2mate.com - Souly Had Melii  Crush.mp3"></audio>
+                    </div>
+                    <div class="playlist-desc">
+                        <h3>Crush</h3>
+                        <p>Souly Had</p>
+                        <p>Crush</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="achievements">
+            <div id="projects">
+                <div class="sub-header">
+                    <h1>Projects</h1>
+                    <div class="line"></div>
+                </div>
+                <div id="project-container" class="carousel carousel-dark slide" data-bs-ride="carousel">
+                    <div class="carousel-inner ">
+                      <div class="carousel-item first active" data-bs-interval="5000">
+                        <a href="https://azizishaharuddin.github.io/Day14/" target="_blank">
+                            <div class="hidden"></div>
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>OpenWeather API</h5>
+                                <p>Get real time weather forecast for several locations in Malaysia</p>
+                            </div>
+                        </a>
+                      </div>
+                      <div class="carousel-item second" data-bs-interval="5000">
+                        <a href="https://azizishaharuddin.github.io/Day7-Assessment/" target="_blank">
+                            <div class="hidden"></div>
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>John Doe.</h5>
+                                <p>A portfolio of John Doe, a Photographer and a Website Designer, using responsive website</p>
+                            </div>
+                        </a>
+                      </div>
+                      <div class="carousel-item third" data-bs-interval="5000">
+                        <a href="https://azizishaharuddin.github.io/Day3-Assessment2/" target="_blank">
+                            <div class="hidden"></div>
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Surrealisme</h5>
+                                <p>A poster that potrays the meaning of unknown</p>
+                            </div>
+                        </a>
+                      </div>
+                      <div class="carousel-item forth" data-bs-interval="5000">
+                        <a href="https://azizishaharuddin.github.io/Day4-Assessment/" target="_blank">
+                            <div class="hidden"></div>
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Trafalgar</h5>
+                                <p>A landing page website</p>
+                            </div>
+                        </a>
+                      </div>
+                      <div class="carousel-item fifth" data-bs-interval="5000">
+                        <a href="./web_2/final.html" target="_blank">
+                            <div class="hidden"></div>
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>My Food</h5>
+                                <p>A responsive website of My Food</p>
+                            </div>
+                        </a>
+                      </div>
+                      <div class="carousel-item six" data-bs-interval="5000">
+                        <a href="https://azizishaharuddin.github.io/Day12/" target="_blank">
+                            <div class="hidden"></div>
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>To do List</h5>
+                                <p>Too much work to do? Afraid not! You can make your own checklist of what to do using this platform</p>
+                            </div>
+                        </a> 
+                      </div>
+                      <div class="carousel-item seven" data-bs-interval="5000">
+                        <a href="https://azizishaharuddin.github.io/Day10/" target="_blank">
+                            <div class="hidden"></div>
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Parallax</h5>
+                                <p>Try move around your mouse to see some magic!</p>
+                            </div>
+                        </a>
+                      </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#project-container" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                      </button>
+                      <button class="carousel-control-next" type="button" data-bs-target="#project-container" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>                
+            </div>
+            <div id="resume">
+                <div class="sub-header">
+                    <h1>Resume</h1>
+                    <div class="line"></div>
+                </div>
+                <div class="resume-container">
+                    <div class="resume-content">
+                        <div class="resume-one"></div>
+                    </div>  
+                </div>
+                <a href="./Azizi Shaharuddin - CV Aug21.pdf" target="_blank">Download</a>
+            </div>
+            <section class="portfolio-desk">
+                <div class="desk-project">
+                    <div class="sample-project first"></div>
+                    <div class="sample-project-desc">
+                        <h3>OpenWeather API</h3>
+                        <h6>Get real time weather forecast for several locations in Malaysia</h6>
+                        <a href="https://azizishaharuddin.github.io/Day14/" target="_blank"><p>Visit Page <i class="fa fa-arrow-right"></i> </p></a>
+                    </div>
+                </div>
+                <div class="desk-project">
+                    <div class="sample-project second"></div>
+                    <div class="sample-project-desc">
+                        <h3>John Doe.</h3>
+                        <h6>A portfolio of John Doe, a Photographer and a Website Designer, using responsive website</h6>
+                        <a href="https://azizishaharuddin.github.io/Day7-Assessment/" target="_blank"><p>Visit Page <i class="fa fa-arrow-right"></i> </p></a>
+                    </div>
+                </div>
+                <div class="desk-project">
+                    <div class="sample-project third"></div>
+                    <div class="sample-project-desc">
+                        <h3>Surrealisme</h3>
+                        <h6>A poster that potrays the meaning of unknown</h6>
+                        <a href="https://azizishaharuddin.github.io/Day3-Assessment2/" target="_blank"><p>Visit Page <i class="fa fa-arrow-right"></i> </p></a>
+                    </div>
+                </div>
+                <div class="desk-project">
+                    <div class="sample-project forth"></div>
+                    <div class="sample-project-desc">
+                        <h3>Trafalgar</h3>
+                        <h6>A landing page website</h6>
+                        <a href="https://azizishaharuddin.github.io/Day4-Assessment/" target="_blank"><p>Visit Page <i class="fa fa-arrow-right"></i> </p></a>
+                    </div>
+                </div>
+                <div class="desk-project">
+                    <div class="sample-project fifth"></div>
+                    <div class="sample-project-desc">
+                        <h3>My Food</h3>
+                        <h6>A responsive website of My Food</h6>
+                        <a href="./web_2/final.html" target="_blank"><p>Visit Page <i class="fa fa-arrow-right"></i> </p></a>
+                    </div>
+                </div>
+                <div class="desk-project">
+                    <div class="sample-project six"></div>
+                    <div class="sample-project-desc">
+                        <h3>To do List</h3>
+                        <h6>Too much work to do? Afraid not! You can make your own checklist of what to do using this platform</h6>
+                        <a href="https://azizishaharuddin.github.io/Day12/" target="_blank"><p>Visit Page <i class="fa fa-arrow-right"></i> </p></a>
+                    </div>
+                </div>
+                <div class="desk-project">
+                    <div class="sample-project seven"></div>
+                    <div class="sample-project-desc">
+                        <h3>Parallax</h3>
+                        <h6>Try move around your mouse to see some magic!</h6>
+                        <a href="https://azizishaharuddin.github.io/Day10/" target="_blank"><p>Visit Page <i class="fa fa-arrow-right"></i> </p></a>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <div class="form-footer">
+            <div class="contact-me">
+                <h3>GET IN TOUCH</h3>
+                <div class="line"></div>
+                <p><i class="fa fa-map-marker-alt"></i> Level 2, 4, 80, Jalan Tasik Utama 5, Sungai Besi, 57000 Kuala Lumpur, Federal Territory of Kuala Lumpur</hp>
+                <p><i class="fa fa-phone"></i> 017-2257890</p>
+                <p><i class="fa fa-envelope"></i> azizishaharuddin@gmail.com</p>
+            </div>
+            <div class="sub-header">
+                <h2>GET IN TOUCH</h2>
+                <div class="line"></div>
+                <p>Please leave me a message</p>
+            </div>
+            <form action="https://getform.io/f/cf8fbf30-708f-4005-8817-0267f628eed1" method="POST" target="_blank">
+                <div class="form-row1">
+                    <div class="row">
+                        <label for="nameInput">Name</label>
+                        <input id="input-task-name" class="col" type="text" name="name" placeholder="Name">
+                    </div>
+                    <div class="row">
+                        <label for="emailInput">Email</label>
+                        <input id="input-task-email" class="col" type="email" name="email" placeholder="Email">
+                    </div>
+                </div>
+                <div class="form-row2">
+                    <div class="row">
+                        <label for="msgInput">Message</label>
+                        <!-- <textarea name="message" id="input-task-msg" rows="50"></textarea> -->
+                        <input id="input-task-msg" class="col" type="text" name="message" placeholder="Message">
+                    </div>
+                    <button type="submit" onclick="submitButton()">Send</button>
+                </div>
+            </form>
+        </div>
+        <footer>
+            <i class="fab fa-facebook"></i>
+            <a href="https://www.linkedin.com/in/azizishaharuddin/" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/AziziShaharuddin" target="_blank"><i class="fab fa-github"></i></a>
+            <i class="fab fa-twitter"></i>
+            <i class="fab fa-instagram"></i>
+        </footer>
+    </div>
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+    <script src="./portfolio.js"></script>
+</body>
+</html>
